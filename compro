@@ -1,33 +1,25 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>NAWASENA Event Organizer</title>
 
-<meta name="description"
-content="NAWASENA Event Organizer melayani Wedding, School Event, dan Corporate Event profesional.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+href="assets/css/style.css">
 
 </head>
 
 <body>
 
-<!-- HEADER -->
-
 <header>
 
-<div class="logo-area">
+<div class="logo">
 
-<img src="logo-nawasena.png">
+<img src="assets/images/logo-nawasena.png">
 
-<div>
 <h2>NAWASENA Event Organizer</h2>
-<small>Profesional & Terpercaya</small>
-</div>
 
 </div>
 
@@ -36,7 +28,8 @@ content="NAWASENA Event Organizer melayani Wedding, School Event, dan Corporate 
 <a href="#">Home</a>
 <a href="#layanan">Layanan</a>
 <a href="#galeri">Galeri</a>
-<a href="#kontak">Kontak</a>
+<a href="#booking">Booking</a>
+<a href="login.php">Admin</a>
 
 </nav>
 
@@ -46,9 +39,14 @@ content="NAWASENA Event Organizer melayani Wedding, School Event, dan Corporate 
 
 <section class="slideshow">
 
-<img class="slide" src="banner1.jpg">
-<img class="slide" src="banner2.jpg">
-<img class="slide" src="banner3.jpg">
+<img class="slide"
+src="assets/images/banner1.jpg">
+
+<img class="slide"
+src="assets/images/banner2.jpg">
+
+<img class="slide"
+src="assets/images/banner3.jpg">
 
 </section>
 
@@ -58,24 +56,30 @@ content="NAWASENA Event Organizer melayani Wedding, School Event, dan Corporate 
 
 <h1>Layanan Kami</h1>
 
-<div class="layanan-box">
+<div class="card-container">
 
 <div class="card">
-<img src="wedding.jpg">
+
+<img src="assets/images/wedding.jpg">
+
 <h3>Wedding Event</h3>
-<p>Acara pernikahan elegan dan berkesan</p>
+
 </div>
 
 <div class="card">
-<img src="school.jpg">
+
+<img src="assets/images/school.jpg">
+
 <h3>School Event</h3>
-<p>Wisuda, perpisahan, pentas seni</p>
+
 </div>
 
 <div class="card">
-<img src="corporate.jpg">
+
+<img src="assets/images/corporate.jpg">
+
 <h3>Corporate Event</h3>
-<p>Seminar, gathering, launching</p>
+
 </div>
 
 </div>
@@ -90,46 +94,97 @@ content="NAWASENA Event Organizer melayani Wedding, School Event, dan Corporate 
 
 <div class="gallery">
 
-<img src="wedding.jpg">
-<img src="school.jpg">
-<img src="corporate.jpg">
-<img src="banner1.jpg">
-<img src="banner2.jpg">
-<img src="banner3.jpg">
+<img src="assets/images/wedding.jpg">
+<img src="assets/images/school.jpg">
+<img src="assets/images/corporate.jpg">
+
+<img src="assets/images/banner1.jpg">
+<img src="assets/images/banner2.jpg">
+<img src="assets/images/banner3.jpg">
 
 </div>
 
 </section>
 
-<!-- KONTAK -->
+<!-- BOOKING -->
 
-<section id="kontak">
+<section id="booking">
 
-<h1>Hubungi Kami</h1>
+<h1>Booking Event</h1>
 
-<p>WhatsApp kami untuk konsultasi gratis</p>
+<form
+action="simpan_booking.php"
+method="POST">
 
-<a class="wa-button"
-href="https://wa.me/6281388732686"
+<input
+type="text"
+name="nama"
+placeholder="Nama"
+required>
+
+<input
+type="text"
+name="telepon"
+placeholder="Telepon"
+required>
+
+<input
+type="email"
+name="email"
+placeholder="Email">
+
+<select
+name="jenis_event">
+
+<option>Wedding</option>
+<option>School</option>
+<option>Corporate</option>
+
+</select>
+
+<input
+type="date"
+name="tanggal_event">
+
+<input
+type="text"
+name="lokasi"
+placeholder="Lokasi">
+
+<textarea
+name="pesan"
+placeholder="Pesan">
+
+</textarea>
+
+<button type="submit">
+
+Kirim Booking
+
+</button>
+
+</form>
+
+</section>
+
+<!-- WHATSAPP -->
+
+<a
+class="wa"
+href="https://wa.me/6281234567890"
 target="_blank">
 
 Chat WhatsApp
 
 </a>
 
-</section>
-
-<!-- FOOTER -->
-
 <footer>
 
-<p>
 © 2026 NAWASENA Event Organizer
-</p>
 
 </footer>
 
-<script src="script.js"></script>
+<script src="assets/js/script.js"></script>
 
 </body>
 </html>
